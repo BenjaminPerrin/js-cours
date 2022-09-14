@@ -5,8 +5,19 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
-let distance = prompt('distance m?');
-let temps = prompt('temps sec?');
+let mail = 'bob@bob.com';
+let mdp = 'boby';
+let checkMail;
+let checkMdp;
+check();
+if (mail === checkMail && mdp === checkMdp) {
+  console.log('bienvenu');
+} else {
+  console.log('mail or mdp not working');
+  check();
+}
 
-console.log(distance / temps + 'm/s');
-alert(distance / temps + 'm/s');
+function check() {
+  checkMail = prompt('mail ?');
+  checkMdp = prompt('mdp ?');
+}
